@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy MDE Windows Server</title>
+</head>
+<body>
+    <h1> Instructions to onboarding Windows Server to MDE</h1>
+
+    <h3> <ol> 1. Make sure following pre-requisites are met from target server: </ol></h3>
+
+       <ol>Check if there is an MDE service active and installed. Run the command via PowerShell: "get-service sense"</ol>
+       <ol>Check if there are previous versions of the MDE linked to a TENANT ID from another organization. See if there are any registry entries in <strong> HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows Advanced Threat Protection" </strong>If there is, go to step 3</ol>
+       <ol>Make Download Script Offboarding (if necessary)</ol>
+       <ol>Make Download Script Onboarding</ol>
+       <ol>Both scripts must be run as administrator</ol>
+
+
+    <h3> <ol> 2. Prepare following 1 file for offboarding and copy them to target server </ol></h3>
+
+       <ol> Make Download Script Offboarding and execute to target server</ol>
+       <ol> <img height="872" width="1518" src="image3.png"> </ol><br>
+
+   <h3> <ol> 3. Run Script Onboarding on target server to install Microsoft Defender</ol>. </h3>
+        
+        <ol> <img height="492" width=" 763" src="image4.png"> </ol> <br> <br>
+
+
+   <h3> <ol> 4. Validating the installation on Windows and checking the registry entry.  </ol></h3>
+
+        <ol> Use the following registry key to verified key its correct ID Org final<strong> "ee1" in"HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows Advanced Threat Protection" </strong></ol>
+        <ol> <img height="496" width="1240" src="image5.png"></ol><br>
+        <ol> Check device tagging in <strong> "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging" </strong></ol>
+        <ol> <img height="764" width="1312" src="image6.png"></ol> </ol><br>
+        <ol>Check if there is an MDE status service is active Run the command via PowerShell: <strong>"get-service sense" </strong></ol>
+        <ol> <img height="231" width="616" src="image7.png"></ol> </ol><br>
+
+</body>
+</html>
