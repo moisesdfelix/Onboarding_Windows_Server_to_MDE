@@ -1,0 +1,10 @@
+# checking current status complete MDE 
+
+get-mpcomputerstatus
+
+# For Windows 2016 Server its necessary install package below:
+
+# Install package .msi via PowerShell
+
+Msiexec.exe /i md4ws.msi /quiet
+
